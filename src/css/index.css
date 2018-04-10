@@ -1,0 +1,400 @@
+#main {
+  position: relative;
+}
+
+#main .mt_r {
+  width: 220px;
+  background: #fff;
+  height: 480px;
+  position: absolute;
+  right: 30px;
+  top: -500px;
+  overflow: hidden;
+}
+
+#main .mt_r .user-login {
+  padding: 10px;
+}
+
+#main .mt_r .user-login dl {
+  overflow: hidden;
+}
+
+#main .mt_r .user-login dl dt {
+  float: left;
+  border: 3px solid #eee;
+  border-radius: 100%;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  margin: 0 5px;
+}
+
+#main .mt_r .user-login dd {
+  margin-left: 64px;
+  line-height: 22px;
+}
+
+#main .mt_r .user-login dd p {
+  color: #c80f1e;
+}
+
+#main .mt_r .user-login dd a {
+  color: #000;
+}
+
+#main .mt_r .user-login dd a:hover {
+  color: #c80f1e;
+}
+
+#main .mt_r .login-text a {
+  color: #c80f1e;
+}
+
+#main .mt_r a:hover {
+  color: #c80f1e;
+  text-decoration: underline;
+}
+
+#main .main_c {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#main .main_c .margin-right {
+  margin-right: 10px;
+}
+
+#main .main_c .troika-list {
+  float: left;
+  width: 393px;
+  background: #fff;
+}
+
+#main .main_c .troika-list .troika-body {
+  padding: 10px;
+  overflow: hidden;
+}
+
+#main .main_c .troika-list .troika-body a {
+  display: block;
+  position: relative;
+  color: #555;
+  width: 186px;
+  height: 126px;
+}
+
+#main .main_c .troika-list .troika-body a img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#main .main_c .troika-list .troika-body .right {
+  float: right;
+}
+
+#main .main_c .troika-list .troika-body .right a {
+  border-bottom: 1px dashed #d6d6d6;
+}
+
+#main .main_c .troika-list .troika-body .right a:last-child {
+  border-bottom: none;
+}
+
+#main .main_c .troika-list .troika-body .right .diy-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: 170px;
+}
+
+#main .main_c .troika-list .troika-body .right .diy-tip h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+
+#main .main_c .troika-list .troika-body .left {
+  float: left;
+  border-right: 1px dashed #d6d6d6;
+}
+
+#main .main_c .troika-list .troika-body .left .diy-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: 170px;
+}
+
+#main .main_c .troika-list .troika-body .left .diy-tip h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+
+#main .main_c .troika-list .troika-body .big-img {
+  border-bottom: 1px dashed #d6d6d6;
+  width: 186px;
+  height: 253px;
+  overflow: hidden;
+}
+
+#main .main_c .troika-list .troika-body .big-img .img {
+  position: absolute;
+  bottom: 0;
+  left: 13px;
+}
+
+#main .main_c .anim-left:hover img {
+  transform: translateX(-10px);
+  transition-duration: .3s;
+  vertical-align: top;
+}
+
+#main .main_b .diy-floor {
+  background: #fff;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+#main .main_b .diy-floor .floor-main {
+  padding: 10px;
+  overflow: hidden;
+}
+
+#main .main_b .diy-floor .leftAD {
+  width: 190px;
+  float: left;
+}
+
+#main .main_b .diy-floor .leftAD .diy-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: 170px;
+}
+
+#main .main_b .diy-floor .leftAD .diy-tip h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+  font-weight: normal;
+  color: #000;
+}
+
+#main .main_b .diy-floor .leftAD .diy-tip h3:hover {
+  color: #c80f1e;
+}
+
+#main .main_b .diy-floor .leftAD .diy-tip .grey-6 {
+  color: #6b6b6b;
+}
+
+#main .main_b .diy-floor .leftAD a:hover {
+  text-decoration: underline;
+}
+
+#main .main_b .diy-floor .anim-zoom {
+  overflow: hidden;
+  position: relative;
+}
+
+#main .main_b .diy-floor .anim-zoom img {
+  transition-duration: 1s;
+  vertical-align: top;
+}
+
+#main .main_b .diy-floor .anim-zoom:hover img {
+  transform: scale(1.1);
+}
+
+#main .main_b .diy-floor .bottomAD {
+  position: relative;
+  display: block;
+  height: 150px;
+  color: #fff;
+  text-align: center;
+}
+
+#main .main_b .diy-floor .bottomAD .textAD {
+  display: block;
+  line-height: 34px;
+  position: absolute;
+  top: -34px;
+  width: 150px;
+  left: -10px;
+  padding: 0 30px 0 20px;
+  opacity: 0.7;
+  text-align: left;
+  color: #fff;
+}
+
+#main .main_b .diy-floor .bottomAD dl {
+  display: block;
+  padding: 30px 20px;
+}
+
+#main .main_b .diy-floor .bottomAD dl dt {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+#main .main_b .diy-floor .bottomAD dd {
+  display: block;
+}
+
+#main .main_b .diy-floor .bottomAD dd span {
+  width: 70px;
+  display: inline-block;
+  line-height: 20px;
+}
+
+#main .main_b .diy-floor .bottomAD dd span a {
+  color: #fff;
+}
+
+#main .main_b .diy-floor .shop-list {
+  float: left;
+  margin-left: 10px;
+  width: 780px;
+  height: 440px;
+}
+
+#main .main_b .diy-floor .shop-list .anim-left {
+  overflow: hidden;
+  position: relative;
+}
+
+#main .main_b .diy-floor .shop-list .anim-left:hover img {
+  transform: translateX(-10px);
+}
+
+#main .main_b .diy-floor .shop-list .diy-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: 170px;
+}
+
+#main .main_b .diy-floor .shop-list .diy-tip h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+
+#main .main_b .diy-floor .shop-list ul {
+  overflow: hidden;
+  height: 439px;
+}
+
+#main .main_b .diy-floor .shop-list li {
+  float: left;
+  width: 25%;
+  height: 220px;
+}
+
+#main .main_b .diy-floor .shop-list li a {
+  border-right: 1px dashed #d6d6d6;
+  border-bottom: 1px dashed #d6d6d6;
+  display: block;
+  height: 220px;
+}
+
+#main .main_b .diy-floor .shop-list li img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition-duration: .3s;
+  vertical-align: top;
+}
+
+#main .main_b .diy-floor .rightAD {
+  width: 200px;
+  float: right;
+}
+
+#main .main_b .diy-floor .rightAD a {
+  display: block;
+  height: 110px;
+}
+
+#main .main_b .diy-floor .rightAD a img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#main .main_b .diy-floor .anim-left {
+  overflow: hidden;
+  position: relative;
+}
+
+#main .main_b .diy-floor .anim-left img {
+  transition-duration: .3s;
+  vertical-align: top;
+}
+
+#main .main_b .diy-floor .anim-left:hover img {
+  transform: translateX(-10px);
+}
+
+#main .main_b .diy-floor .diy-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  line-height: 18px;
+  width: 170px;
+}
+
+#main .main_b .diy-floor .diy-tip h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+  font-weight: normal;
+}
+
+#main .main_b .diy-floor .brand-link {
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+}
+
+#main .main_b .diy-floor .brand-link .link-list {
+  position: absolute;
+  padding: 0 15px;
+  width: 100%;
+  z-index: 9;
+}
+
+#main .main_b .diy-floor .brand-link .link-list span {
+  font-size: 16px;
+  margin-right: 20px;
+  float: left;
+}
+
+#main .main_b .diy-floor .brand-link .link-list a {
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 16px 0 0 15px;
+  padding-right: 15px;
+}
+
+#main .main_b .diy-floor .brand-link .link-list a:hover {
+  text-decoration: underline;
+}
+
+#main .main_b .diy-floor .brand-link .link-bg {
+  height: 46px;
+  opacity: .3;
+}
