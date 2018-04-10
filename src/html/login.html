@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="../css/hfooter.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+
+</head>
+<body>
+    <div id="nphone">
+        <div class="wrapper" id="login_head" style="display:">
+            <div class="container">
+                <div class="log_head">
+                    <h1 class="log_logo left">
+                        <a href="/">
+                            <img src="../css/img/log-logo.png" width="100" height="50">
+                            <span>欢迎登录</span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="login_wrap" style="width:; background:#fff url(../css/img/login-bg.jpg) no-repeat center top; padding:40px 0;">  
+            <div class="wrapper" id="login_body" style="width:;">
+                <div class="log_ad" style="display:">   
+                    <a href="#"></a>     
+                </div>
+                <div class="login_border" style="padding:8px;">
+                    <!--普通登录-->
+                    <div class="login" style="display: block;">
+                        <div style="position:absolute; right:30px; top:14px;"><a href="../html/reg.html" >账号注册<em style="width:16px; height:16px; background:#999; float:right; color:#fff; border-radius:100%; text-align:center; line-height:16px; margin:1px 0 0 5px; font-family:'宋体'; font-weight:bold;">&gt;</em></a></div>
+                        <ul class="login-tab">                     
+                            <li class="login-on">普通登录</li>
+                        </ul>
+                        <div class="login-body">
+                             <div class="login-style" style="display: block;">
+                                <dl>
+                                    <dd><input name="txtUser" type="text" id="txtUser" placeholder="用户名/邮箱/手机号"></dd>
+                                </dl>
+                                <dl>
+                                    <dd><input type="password" id="Userpwd" onkeydown="enterHandler(event)" placeholder="请输入您的密码"></dd>
+                                </dl>
+                                <dl id="logincode" style="display: none;">
+                                    <dd><input type="text" id="txtCode" name="txtCode" style="width: 133px; margin-right: 10px;" placeholder="验证码"><img id="vCodeImg" src="/ImgCode.aspx" width="90" height="34" title="点击换一个" style="vertical-align: middle; margin-top: -4px;" onclick="this.src='/ImgCode.aspx?t='+Math.random()*100"></dd>
+                                </dl>
+                                <div class="psword" style="margin-top:15px;"><a href="#" onclick="zhaohui(this)" tabindex="-1" class="right" >忘记密码?</a></div>
+                                
+                                <div class="remember">
+                                    <input type="checkbox" id="issave" checked=""><label for="issave">下次自动登录</label>
+                                </div>
+                                
+                                
+                                <div class="tishi"></div>
+                                <button onclick="cliLogin()" id="logbtn" style="outline:none">登 录</button>
+                            </div>
+                            
+                        </div>
+
+                        <div class="hezuo">
+                            <h3>使用合作网站的账号登录：</h3>
+                            <p>
+                                <a href="#" onclick="showWxlog()"><i class="wx"></i>微信</a>
+                                <a href="#" onclick="qqLogin()"><i class="qq"></i>QQ号</a>
+                            </p>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="bottom">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="foot_nav">
+                        <a href="#" rel="nofollow">常见问题</a><i>|</i>
+                        <a href="#" rel="nofollow">供应商申请</a><i>|</i>
+                        <a href="#" rel="nofollow">配送方式</a><i>|</i>
+                        <a href="#" rel="nofollow">招聘信息</a><i>|</i>
+                        <a href="#" rel="nofollow">关于我们</a><i>|</i>
+                        <a href="#" rel="nofollow">联系我们</a><i>|</i>
+                        <a href="#">地区报价</a><i>|</i>
+                        <a href="#">加盟招商</a><i>|</i>
+                        <a href="#">IT服务</a>
+                    </div>
+
+                    <div class="copy">
+                        
+                        <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+                        
+                        <p>网站ICP备案号：<a rel="nofollow" href="#" target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" href="#" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+                        
+                        <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+                        <p>云南九机信息技术有限公司版权所有</p>
+                    </div>
+                    <div class="bot-link">
+                    <a href="#"><img src="../img/bottom.png" /></a></div>        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+.login_wrap {
+  margin-bottom: 20px;
+  height: 370px;
+}
+
+.login_wrap .wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.login_wrap .wrapper .log_ad {
+  width: 600px;
+  float: left;
+  overflow: hidden;
+  height: 370px;
+}
+
+.login_wrap .wrapper .log_ad a {
+  display: block;
+  width: 600px;
+  height: 370px;
+}
+
+.login_wrap .login_border {
+  float: right;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.login_wrap .login {
+  width: 330px;
+  min-height: 334px;
+  padding-bottom: 20px;
+  background: #fff;
+  position: relative;
+}
+
+.login_wrap .login a {
+  font-size: 12px;
+  color: #000;
+}
+
+.login_wrap .login a:hover {
+  text-decoration: underline;
+  color: #c80f1e;
+}
+
+.login_wrap .login ul {
+  overflow: hidden;
+  width: 310px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e7e7e7;
+  height: 46px;
+}
+
+.login_wrap .login ul li {
+  float: left;
+  width: 60px;
+  text-align: center;
+  height: 45px;
+  margin: 0 10px;
+  line-height: 46px;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.login_wrap .login-on {
+  color: #c80f1e;
+  font-size: 14px;
+  border-bottom: 1px solid #c80f1e !important;
+}
+
+.login_wrap .login-body {
+  padding: 5px 30px 0;
+  overflow: hidden;
+}
+
+.login_wrap .login-body dl {
+  margin-top: 20px;
+}
+
+.login_wrap .login-body dd input {
+  border: solid 1px #d6d6d6;
+  height: 34px;
+  line-height: 28px\9;
+  width: 233px;
+  padding-left: 35px;
+  border-radius: 3px;
+}
+
+.login_wrap .login-body .right {
+  float: right;
+}
+
+.login_wrap .login-body .remember input {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.login_wrap .login-body .remember label {
+  color: #999;
+  font-size: 12px;
+}
+
+.login_wrap .login-body .tishi {
+  line-height: 26px;
+  color: #c80f1e;
+  margin-top: 10px;
+}
+
+.login_wrap .login-body button {
+  width: 270px;
+  border: 0;
+  background: #c80f1e;
+  border-radius: 3px;
+  height: 40px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.login_wrap .hezuo {
+  margin-top: 15px;
+  padding: 0 30px;
+}
+
+.login_wrap .hezuo h3 {
+  color: #999;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.login_wrap .hezuo a {
+  display: inline-block;
+  padding: 0 10px;
+  height: 25px;
+  line-height: 25px;
+  background: #f3f3f3;
+  border: solid 1px #e3e3e3;
+  border-radius: 3px;
+  margin-right: 10px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.login_wrap .hezuo a .wx {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../img/wx.png) no-repeat;
+}
+
+.login_wrap .hezuo a .qq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../img/qq.png) no-repeat;
+}
+
+#txtUser {
+  background: url(../img/icon-user.png) no-repeat 2px 2px;
+  background-size: 30px;
+}
+
+#Userpwd {
+  background: url(../img/icon-pw.png) no-repeat 2px 2px;
+}

@@ -1,0 +1,124 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.login_wrap {
+  background: #fff url(../img/reg_bg.png) no-repeat right center;
+  border: solid 8px #f0f0f0;
+  min-height: 340px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+.login_wrap .zhuce-tab {
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+  background: #eee;
+  display: inline-block;
+  font-family: 'Microsoft YaHei';
+}
+
+.login_wrap .zhuce-tab li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-right: solid 1px #ddd;
+}
+
+.login_wrap .zhuce-tab .xz {
+  border-top: solid 2px #c80f1e;
+  font-size: 16px;
+  color: #666;
+  background: #fff;
+}
+
+.login_wrap .regtip {
+  margin: 10px 10px 0 0;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.login_wrap .regtip a {
+  background: #9c3;
+  color: #fff;
+  margin-left: 5px;
+  padding: 2px;
+  text-shadow: none;
+}
+
+.login_wrap .reg dl {
+  line-height: 30px;
+  margin-top: 15px;
+  min-height: 30px;
+}
+
+.login_wrap .reg dl dt {
+  color: #999;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  width: 100px;
+}
+
+.login_wrap .reg dl dt i {
+  color: #f33;
+}
+
+.login_wrap .reg dl dd {
+  margin-left: 110px;
+}
+
+.login_wrap .reg dl dd input {
+  border: solid 1px #ccc;
+  border-radius: 2px;
+  box-shadow: inset 0 2px #f3f3f3;
+  height: 28px;
+  line-height: 28px\9;
+  text-indent: 5px;
+  width: 240px;
+}
+
+.login_wrap .reg dl dd em {
+  color: #999;
+  margin-left: 10px;
+}
+
+.login_wrap .reg dl dd a:hover {
+  text-decoration: underline;
+  color: #c80f1e;
+}
+
+.login_wrap .reg dl dd button {
+  background: #c80f1e;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  width: 160px;
+}
+
+.login_wrap .reg .btn {
+  margin-left: 10px;
+  border: 1px solid #dddddd;
+  padding: 0;
+  width: 106px;
+  height: 30px;
+  background: #f4f4f4;
+  margin-top: 0;
+  text-align: center;
+  line-height: 30px;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.login_wrap .reg #mmprovision2 {
+  width: auto;
+  box-shadow: none;
+}
