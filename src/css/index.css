@@ -1,3 +1,8 @@
+#banner {
+  width: 760px;
+  height: 480px;
+}
+
 #main {
   position: relative;
 }
@@ -8,7 +13,7 @@
   height: 480px;
   position: absolute;
   right: 30px;
-  top: -500px;
+  top: -480px;
   overflow: hidden;
 }
 
