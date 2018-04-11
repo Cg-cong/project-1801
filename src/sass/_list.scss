@@ -1,0 +1,61 @@
+#nphone{background-color:#fff;}
+#list{
+    // .container{width: 960px;}
+    .list_sort{width: 960px; height: 40px;line-height: 40px;border: solid 1px #e3e3e3;background: #f6f6f6;text-shadow: 0 1px 0 #fff;overflow: hidden;
+        a{color: #333;transition: color .1s;}
+        a:hover{color: #e12e2e;}
+        button {border:1px solid #888;height: 28px;padding: 0 10px;}
+        .sort_btn{
+             a {display: inline-block;height: 40px;  line-height: 40px;border-right: solid 1px #e3e3e3;padding: 0 20px;text-decoration: none;}
+             .cur {background: #c80f1e;color: #fff;text-shadow: none;}
+            }
+        .xianhuo_section {color: #666;float: left;margin-left: 20px;padding-right: 20px;border-right: 1px solid #e3e3e3;
+            span{cursor: pointer;display: inline-block;}
+            i {height: 20px;width: 20px;border: 1px solid #ccc;text-align: center;line-height: 20px; display: inline-block;font-size: 12px;   background: #fff;margin-right: 5px;  vertical-align: middle;overflow: hidden;}
+        }
+        .price_section {float: left;margin-left: 20px;   color: #999;
+            input {width: 50px;height: 25px;line-height: 25px\9;border: solid 1px #ccc;text-align: center;vertical-align: middle;}
+
+        }
+        .left {float: left;}
+        .small_page {float: right;margin-right: 10px;
+            a{display: inline-block;width: 20px;height: 20px;line-height: 20px;text-align: center;  font-family: SimSun;border: solid 1px #ccc;background: #fff;border-radius: 20px;}
+            a:hover{background: #58bc58;color: #fff;border-color: #58bc58;text-decoration: none;}
+            .red{color: #e12e2e;}
+        }
+    }
+    .list{
+        ul{width: 960px;}
+        .left{float: left;}
+         li{width: 200px;margin: 7px;float: left;padding: 10px; height: 320px;border: solid 3px transparent;transition: all 0.5s;position: relative;
+            a{color:#333;}
+            a:hover{text-decoration: underline;color: #c80f1e;}
+            .propic {display: block;width: 200px;height: 200px;}
+            h4 {height: 56px;overflow: hidden;margin-top: 5px;word-wrap: break-word;word-break: break-all;font-weight: normal;}
+            span{color: #c80f1e;}
+            .p_price {margin: 8px 0;
+            b {font-size: 16px;color: #e12e2e;}
+            }
+        }
+        li:hover{border: solid 3px #ddd;}
+    }
+    .page{height: 45px;margin-top: 35px;text-align: right;
+        span {
+        margin-right: 10px;
+        color: #666;    }
+        a {
+        color: #666;
+        border: 1px solid #eee;
+        margin: 0 3px;
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 8px;}
+        .cur{    color: #fff;
+        background: #c80f1e;
+        border-color: #c80f1e;} 
+        a:hover{    text-decoration: none;
+        border-color: #c80f1e;
+        color: #c80f1e;}   
+    }
+}

@@ -1,0 +1,210 @@
+#nphone {
+  background-color: #fff;
+}
+
+#list .list_sort {
+  width: 960px;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #e3e3e3;
+  background: #f6f6f6;
+  text-shadow: 0 1px 0 #fff;
+  overflow: hidden;
+}
+
+#list .list_sort a {
+  color: #333;
+  transition: color .1s;
+}
+
+#list .list_sort a:hover {
+  color: #e12e2e;
+}
+
+#list .list_sort button {
+  border: 1px solid #888;
+  height: 28px;
+  padding: 0 10px;
+}
+
+#list .list_sort .sort_btn a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border-right: solid 1px #e3e3e3;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+#list .list_sort .sort_btn .cur {
+  background: #c80f1e;
+  color: #fff;
+  text-shadow: none;
+}
+
+#list .list_sort .xianhuo_section {
+  color: #666;
+  float: left;
+  margin-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #e3e3e3;
+}
+
+#list .list_sort .xianhuo_section span {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#list .list_sort .xianhuo_section i {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
+  font-size: 12px;
+  background: #fff;
+  margin-right: 5px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#list .list_sort .price_section {
+  float: left;
+  margin-left: 20px;
+  color: #999;
+}
+
+#list .list_sort .price_section input {
+  width: 50px;
+  height: 25px;
+  line-height: 25px\9;
+  border: solid 1px #ccc;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#list .list_sort .left {
+  float: left;
+}
+
+#list .list_sort .small_page {
+  float: right;
+  margin-right: 10px;
+}
+
+#list .list_sort .small_page a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-family: SimSun;
+  border: solid 1px #ccc;
+  background: #fff;
+  border-radius: 20px;
+}
+
+#list .list_sort .small_page a:hover {
+  background: #58bc58;
+  color: #fff;
+  border-color: #58bc58;
+  text-decoration: none;
+}
+
+#list .list_sort .small_page .red {
+  color: #e12e2e;
+}
+
+#list .list ul {
+  width: 960px;
+}
+
+#list .list .left {
+  float: left;
+}
+
+#list .list li {
+  width: 200px;
+  margin: 7px;
+  float: left;
+  padding: 10px;
+  height: 320px;
+  border: solid 3px transparent;
+  transition: all 0.5s;
+  position: relative;
+}
+
+#list .list li a {
+  color: #333;
+}
+
+#list .list li a:hover {
+  text-decoration: underline;
+  color: #c80f1e;
+}
+
+#list .list li .propic {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+#list .list li h4 {
+  height: 56px;
+  overflow: hidden;
+  margin-top: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-weight: normal;
+}
+
+#list .list li span {
+  color: #c80f1e;
+}
+
+#list .list li .p_price {
+  margin: 8px 0;
+}
+
+#list .list li .p_price b {
+  font-size: 16px;
+  color: #e12e2e;
+}
+
+#list .list li:hover {
+  border: solid 3px #ddd;
+}
+
+#list .page {
+  height: 45px;
+  margin-top: 35px;
+  text-align: right;
+}
+
+#list .page span {
+  margin-right: 10px;
+  color: #666;
+}
+
+#list .page a {
+  color: #666;
+  border: 1px solid #eee;
+  margin: 0 3px;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 8px;
+}
+
+#list .page .cur {
+  color: #fff;
+  background: #c80f1e;
+  border-color: #c80f1e;
+}
+
+#list .page a:hover {
+  text-decoration: none;
+  border-color: #c80f1e;
+  color: #c80f1e;
+}
