@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded',function(){
     var red = document.querySelectorAll('.red');
     
     for(var i=0;i<red.length;i++){
-        red[i].style.display = 'none';
+        // red[i].style.display = 'none';
+        red[i].style.color = 'red';
     };
     // console.log(red)
     // usermail.onblur=function(){
