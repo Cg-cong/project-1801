@@ -4,6 +4,7 @@
 
 #goodslist {
   border-top: 2px solid #c80f1e;
+  overflow: hidden;
 }
 
 #goodslist .iweizhi {
