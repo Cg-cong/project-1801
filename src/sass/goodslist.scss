@@ -1,0 +1,117 @@
+#nphone{background-color:#fff;}
+#goodslist{
+    border-top:2px solid #c80f1e;
+    .iweizhi {
+    height: 40px;
+    line-height: 40px;    
+    padding-left: 22px;
+    a{color:#333;}
+    a:hover{text-decoration: underline;
+    color: #c80f1e;}
+    }
+    .shopinfo-img{float: left;
+        #bigPicBefore{width: 440px;height: 525px;}
+        .overflow-hide {overflow: hidden;}
+        .relative{position: relative;}
+        .shop-id { margin: 15px 0 10px;
+            b{font-size:16px;}
+            .right{float:right;}
+            .fav-btn{margin-left: 10px;overflow: hidden;color: #666;cursor: pointer;border:1px solid #ddd;padding:2px 8px;                
+            }
+            .fav-btn:hover{color:#c80f1e;background-color:#ddd;}
+        }
+        .m_share{line-height: 24px}
+    }
+    .shopinfo{color: #666;margin-left: 460px;
+        .shop-title {font-size: 16px;color: #666; padding-bottom: 5px;
+                    font-family: "microsoft yahei";            
+        }
+        .new-kf{
+            a {font-size: 12px; color: #999;  float: right; }
+            .d_h2{font-size:16px;}
+            }
+        .fav-btn {margin-left: 10px;overflow: hidden;color: #666; cursor: pointer;                
+        }
+        .miaoshu { font-size: 13px; line-height: 20px; color: #e12e2e;  margin-bottom: 10px;}
+        .pro-info { line-height: 26px; padding: 0 10px;
+                dt{ float: left; width: 60px; color: #666;font-family: SimSun;}
+                dd{ margin-left: 70px;
+                    a{color:#333;}
+                    a:hover{text-decoration: underline; color: #c80f1e; }                    
+                }
+                .overflow-hide {
+                        overflow: hidden;
+                    }
+                .relative {
+                        position: relative;
+                    }
+            }
+        .shop-price-bg {background: #f7f7f7;padding: 5px 0;overflow: hidden; min-height: 44px;
+            .shop-price {padding: 0 10px;font-size: 12px;position: relative;
+                .left{float:left;}
+                .pro-price { font-size: 18px; color: #e12e2e;}
+                .goodsEvaluation {position: absolute; right: 4px; top: 4px;
+                    dl{ text-align: center; float: left; padding: 0 10px; border-right: 1px solid #ddd;
+                        .grey-9{color: #9c9c9c;}}
+                }
+            }   
+        }
+        .xuan_box {padding: 0 10px;margin-top: 5px;
+            .ys_xuan, .zp_xuan { margin-left: 70px;}
+            .ys_xuan li {display: block;text-align: center; line-height: 36px; float: left; margin-right: 8px; margin-bottom: 8px;
+                .yansecur{border: 1px solid #c80f1e;color: #c80f1e;text-decoration: none;} 
+                a:hover{ border: 1px solid #c80f1e;}
+                a{float: left; height: 36px; line-height: 36px; border: 1px solid #ddd; padding-right: 10px; white-space: nowrap; color: #44484c;                 
+                img{float: left;margin: 1px;}    
+                span{margin-left: 10px;}              
+                }
+            }
+            .yanse { padding-top: 5px; overflow: hidden;
+                .pz_tit {width: 60px; float: left; height: 36px; font-size: 12px; color: #666;  line-height: 36px;  font-family: SimSun;}
+            }
+            .dfengex { border-top: dotted 1px #dfdfdf; margin: 8px 0;}
+            .kucun { color: #666;  margin: 14px 0 10px;
+                .kczt {min-height: 27px;  color: #666; position: relative;
+                    span{ display: block;  float: left; height: 25px;  line-height: 25px; width: 60px; font-size: 12px;font-family: SimSun;}                    
+                    .ck_kucun {  padding: 0 4px 0 8px;  border: solid 1px #dfdfdf;  color: #666;  cursor: pointer;
+                        small {  float: none; color: #e12e2e; font-size: 12px;  font-weight: bold;}
+                        .triangle-down {width: 0; height: 0;  border-left: 5px solid transparent;  border-right: 5px solid transparent;  border-top: 7px solid #bbb; display: inline-block;  vertical-align: middle;  margin: 0 3px;}
+                    }
+                }
+                .ps_info {margin-left: 70px;
+                        b{display: block;  float: left; height: 25px;   line-height: 25px; color: #666; font-weight: normal;}
+                        em{display: block;  float: left;  height: 25px; line-height: 25px; color: #666; font-weight: normal;
+                            i{font-weight: bold;}}
+                    }
+            }
+            .fuwu { margin: 15px 0 0; position: relative;
+                .fw_icon { margin: 4px 2px 0 0; height: 16px; width: 16px; display: block; float: left;}
+                span { color: #666; display: block; float: left; font-size: 12px; height: 26px; line-height: 26px;    width: 60px;}
+                ul { margin-left: 10px; width: 650px;}
+                .clearfix{display:inline-block;}
+                li { float: left; height: 26px; line-height: 24px;  margin-right: 10px; margin-bottom: 10px; text-align: left; position: relative;}
+                a {border: 1px solid #ddd; float:left;height: 24px; padding-left: 6px;padding-right: 10px;color: #666;}
+                a:hover{border: 1px solid #c80f1e;}
+                .fuwu-list-box { position: absolute; top: 26px;left: 0;background: #fff; border: 1px solid #ddd; z-index: 1; min-width: 110px; display: none;
+                    a {border: 0; width: 85%;}
+                    a:hover{color:#c80f1e;}
+                }
+                .fuwu-box:hover .fuwu-list-box {display: block;}
+                .a-link{color: #7597dc;}                
+            }
+            .light-blue {color: #7597dc;}
+            #buyType {display: inline-block;}                
+            .buy_btnbox {margin-left: 70px;overflow: hidden;
+                .firstBtn { background: #c80f1e;  color: #fff;}
+                .firstBtn:hover{color: #fff;opacity: 0.9;}
+                a{color: #333;text-decoration: none;transition: color .1s;}
+                a:hover{border: 1px solid #c80f1e;color:#c80f1e;}
+                .add_gwc {padding: 0 20px; height: 44px; border: 1px solid #666; margin: 5px 12px 0 0; display: inline-block;  font-size: 16px; font-family: 'Microsoft YaHei'; line-height: 44px;}
+                }
+                
+            }
+            
+
+    }
+    .bdshare-button-style0-16 {zoom: 1;}
+}

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded',function(){
     ul.innerHTML = '';
     ul.innerHTML = data.map(function(item){
         return `<li  data-myid="${item.id}">
-                            <a class="propic relative" href="#" >
+                            <a class="propic relative"  >
                                 <img class="details" src="${item.imgurl}"  height="200" width="200">
                             </a>
                             <h4 ><a href="#"  >
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
                                 </a>
                             </h4>
                             <p class="p_price"><b class="showallprice nowPrice" proid="30918" data-ppid="58196">￥${item.price}</b></p>
-                            <p class="pj_count">已有<a rel="nofollow" style="font-weight: bold; color: #3caaff;" href="#" target="_blank">${item.pingjia}</a>人评价&nbsp;&nbsp;</p>
+                            <p class="pj_count">已有<a rel="nofollow" style="font-weight: bold; color: #3caaff;" href="#" >${item.pingjia}</a>人评价&nbsp;&nbsp;</p>
                             <p>${item.date}</p>
                         </li>  `
     }).join('');
@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded',function(){
     document.onclick = function(e){
         if(e.target.className=='details'){
             var data_id = e.target.parentNode.parentNode.getAttribute('data-myid');
+            console.log(e.target)
             e.target.href="../html/goodslist.html?id="+data_id;            
-            console.log(data_id)
+            
         }
     }
 });
