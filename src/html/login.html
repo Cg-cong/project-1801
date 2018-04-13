@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" href="../css/logreg.css" />
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
 
+    <script src="../js/common.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+
+
 </head>
 <body>
     <div id="nphone">
@@ -39,15 +43,17 @@
                         <div class="login-body">
                              <div class="login-style" style="display: block;">
                                 <dl>
-                                    <dd><input name="txtUser" type="text" id="txtUser" placeholder="用户名/邮箱/手机号"></dd>
+                                    <dd><input name="txtUser" type="text" id="txtUser" placeholder="用户名/邮箱/手机号">
+                                    <span id="userarror" class="arror">&times;用户名不存在！请先注册。</span>
+                                    </dd>
                                 </dl>
                                 <dl>
-                                    <dd><input type="password" id="Userpwd" onkeydown="enterHandler(event)" placeholder="请输入您的密码"></dd>
+                                    <dd><input type="password" id="Userpwd"  placeholder="请输入您的密码"><span id="pwdarror" class="arror">&times;密码不正确！</span></dd>
                                 </dl>
                                 <dl id="logincode" style="display: none;">
-                                    <dd><input type="text" id="txtCode" name="txtCode" style="width: 133px; margin-right: 10px;" placeholder="验证码"><img id="vCodeImg" src="/ImgCode.aspx" width="90" height="34" title="点击换一个" style="vertical-align: middle; margin-top: -4px;" onclick="this.src='/ImgCode.aspx?t='+Math.random()*100"></dd>
+                                    <dd><input type="text" id="txtCode" name="txtCode" style="width: 133px; margin-right: 10px;" placeholder="验证码"><img id="vCodeImg" width="90" height="34" title="点击换一个" style="vertical-align: middle; margin-top: -4px;" ></dd>
                                 </dl>
-                                <div class="psword" style="margin-top:15px;"><a href="#" onclick="zhaohui(this)" tabindex="-1" class="right" >忘记密码?</a></div>
+                                <div class="psword" style="margin-top:15px;"><a href="#"  tabindex="-1" class="right" >忘记密码?</a></div>
                                 
                                 <div class="remember">
                                     <input type="checkbox" id="issave" checked=""><label for="issave">下次自动登录</label>
@@ -55,7 +61,7 @@
                                 
                                 
                                 <div class="tishi"></div>
-                                <button onclick="cliLogin()" id="logbtn" style="outline:none">登 录</button>
+                                <button  id="logbtn" style="outline:none">登 录</button>
                             </div>
                             
                         </div>

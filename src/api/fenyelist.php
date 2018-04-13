@@ -3,7 +3,7 @@
     require('connect.php');
 
     $page = isset($_GET['page']) ? $_GET['page'] : 1;
-    $qty = isset($_GET['qty']) ? $_GET['qty'] : 10;
+    $qty = isset($_GET['qty']) ? $_GET['qty'] : 12;
 
     //获取查询结果集（集合）
     $result = $conn->query("select * from list");
