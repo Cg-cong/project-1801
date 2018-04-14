@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-    console.log(666)
+    // console.log(666)
     var user = document.querySelector('#txtUser');
     var pwd = document.querySelector('#Userpwd');
     var logbtn = document.querySelector('#logbtn');
@@ -34,9 +34,17 @@ document.addEventListener('DOMContentLoaded',function(){
             },
             success:function(data){
                 console.log(data)
-                // if(_user){
+                if(data == 'success'){
+                    // console.log(666)
+                    
+                    location.href = '../index.html'; 
+                    // var xinxi = {user:user.value};
+                    // Cookie.set("xinxi",JSON.stringify(xinxi),{path:"/"});
 
-                // }
+                }else{
+                    pwdarror.style.display = 'block';
+                    
+                }
             }
         });
     }

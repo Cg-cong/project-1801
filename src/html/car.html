@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>购物车</title>
+    <!-- 链接css样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/hfooter.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/car.css" />
+
+    <!-- 链接js -->
+    <script src="../js/common.js" type="text/javascript"></script>
+    <script src="../lib/jquery-3.2.1.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="nphone">
+        <div id="top">
+            <div class="container">
+                <i class="iconfont icon-location fl"></i><a href="#" class="fl">广州市区</a>
+                <div class="top_l fl">
+                    <p>
+                        Hi,欢迎来九机！
+                        <a href="../html/login.html">登录</a><a href="../html/reg.html">免费注册</a>
+                    </p>
+                </div>
+                <div class="top_r fr">
+                <li class="zhongxin">
+                    <a href="#">个人中心</a><i class="lie fr lie1"></i>
+                        <div class="grzxin">
+                            <a>我的订单</a>
+                            <a>我的积分</a>
+                            <a>我的使用</a>
+                            <a>我的收藏</a>
+                            <a>我的咨询</a>
+                            <a>我的优惠券</a>
+                            <a>报修/退换货</a>
+                        </div>
+                </li>
+                    <li><i class="iconfont icon-huangguan"></i><a href="#">会员俱乐部</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li class="kehuduan t_nav"><i class="iconfont icon-shouji"></i><a href="#">客户端</a></li>
+                    <li><a href="#">在线客服</a></li>
+                    <li class="wznav t_nav"><a href="#">网站导航</a><i class="lie lie2"></i></li>
+                    <li><a href="#"><i class="jubao"></i>不良信息举报</a></li>
+                    <li class="lianxi t_nav"><i class="iconfont icon-ai206"></i><a class="phone" href="#">400-008-3939</a></li>
+                </div>
+            </div>
+        </div>
+        <main id="main">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="order-head">
+                        <a href="/" class="order-logo left">
+                        <img src="//img2.ch999img.com/static/images/new-logo.png"></a>
+                        <div class="order-step right">
+                            <dl class="cur"><dt>1</dt><dd>我的购物车</dd></dl>
+                            <dl><dt>2</dt><dd>填写核对订单</dd></dl>
+                            <dl><dt>3</dt><dd>付款</dd></dl>
+                        </div>
+                    </div>
+                    <div class="cart-box">
+                        <div class="cart-tab">
+                            <div class="left"><a href="javascript:;" class="cur">全部商品 <span class="main-color">2</span></a></div>
+                            <p class="right">已选 <span class="main-color">2</span> 件，合计（不含运费）<b class="main-color">￥13338.00</b></p>
+                        </div>
+                        <div class="cart-item cart-title">
+                            <div class="cart-check"><label class="checkbox radio-box"><input type="checkbox" checked="">全选</label></div>
+                            <div class="cart-product-box">
+                                <div class="product">商品</div>
+                                <div class="unit-price">单价（元）</div>
+                                <div class="discount">优惠（元）</div>
+                                <div class="count">数量</div>
+                                <div class="sum">小计（元）</div>
+                                <div class="action">操作</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                        <div class="cart-check"><label class="checkbox radio-box"><input type="checkbox" checked="" onclick="checkCart('8952780', '58202', this)"></label></div>
+                            
+                            <div class="cart-product-box relative ">
+                                <div class="invalid-mark none"></div>
+                                <div class="product">
+                                    <a href="/product/58202.html" target="_blank" class="block relative left pro-img-box">
+                                        <img src="//img2.ch999img.com/pic/product/160x160/20170913033546139.jpg">
+                                        <div class="invalid-tag hide">商品已失效</div>
+                                    </a>
+                                    <div class="product-title">
+                                        <h5><a href="/product/58202.html" target="_blank">iPhone 8 Plus（A1864）国行版 银色 64GB </a></h5>
+                                        <p class="remark grey-9"></p>
+                                        <p class="gift"><span style="position:absolute;">赠品</span>
+                                        
+                                        <a href="/product/43973.html" target="_blank" class="grey-9 ellipsis" style="margin-left:44px; line-height:22px; display:block;">免费高清膜 苹果 iPhone 7 P/ 8 P </a>
+                                        
+                                        </p>
+                                        
+                                        
+                                        
+                                        <div class="margin-top"></div>
+                                        
+                                        <div class="jiuji-serviceCur"></div>
+                                        
+                                        
+
+                                        <div class="jiuji-server margin-top overflow-hide">
+                                            
+                                            
+                                            
+                                                <a href="javascript:;" class="grey-9" onclick="selServer(8952780)"><i class="baoxiu"></i>选服务</a>
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="unit-price"><b>5650.00</b></div>
+                                <div class="discount">0.00</div>
+                                <div class="count"><a href="javascript:;" onclick="updateCount(-1,1,8952780)">-</a><input type="text" value="1" disabled=""><a href="javascript:;" onclick="updateCount(1,1,8952780)">+</a></div>
+                                <div class="sum"><b class="main-color">5650.00</b></div>
+                                <div class="action">
+                                    
+                                    <a href="javascript:;" class="move-to-favorate" onclick="moveToFavourite(58202)">移入收藏夹</a>
+                                    
+                                    <a href="javascript:;" onclick="delProduct(8952780)">删除</a>
+                                </div>
+                            </div>
+                            <div class="cart-check"><label class="checkbox radio-box"><input type="checkbox" checked="" onclick="checkCart('8952779', '58206', this)"></label></div>
+                            <div class="cart-product-box relative ">
+                                <div class="invalid-mark none"></div>
+                                <div class="product">
+                                    <a href="/product/58206.html" target="_blank" class="block relative left pro-img-box">
+                                        <img src="//img2.ch999img.com/pic/product/160x160/2018032815334366.jpg">
+                                        <div class="invalid-tag hide">商品已失效</div>
+                                    </a>
+                                    <div class="product-title">
+                                        <h5><a href="/product/58206.html" target="_blank">iPhone X（A1865）国行版 银色 64GB </a></h5>
+                                        <p class="remark grey-9"></p>
+                                        <p class="gift"><span style="position:absolute;">赠品</span>
+                                        <a href="/product/58994.html" target="_blank" class="grey-9 ellipsis" style="margin-left:44px; line-height:22px; display:block;">免费高清膜 iPhone X </a>
+                                        </p>
+                                        <p class="sale grey-9"><span>特价</span>该商品特价促销，不与会员优惠叠加</p>
+                                        <div class="margin-top"></div>
+                                        <div class="jiuji-serviceCur"></div>
+                                        <div class="jiuji-server margin-top overflow-hide">
+                                                <a href="javascript:;" class="grey-9" onclick="selServer(8952779)"><i class="baoxiu"></i>选服务</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="unit-price"><b>7688.00</b></div>
+                                <div class="discount">0.00</div>
+                                <div class="count"><a href="javascript:;" onclick="updateCount(-1,1,8952779)">-</a><input type="text" value="1" disabled=""><a href="javascript:;" onclick="updateCount(1,1,8952779)">+</a></div>
+                                <div class="sum"><b class="main-color">7688.00</b></div>
+                                <div class="action">
+                                    <a href="javascript:;" class="move-to-favorate" onclick="moveToFavourite(58206)">移入收藏夹</a>
+                                    <a href="javascript:;" onclick="delProduct(8952779)">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <div class="left margin-left">
+                                <label class="checkbox radio-box"><input type="checkbox" checked="" onchange="checkCart('all','all',this)">全选</label>
+                                <a href="javascript:;" onclick="delProduct('checked')">删除</a>
+                                <a href="javascript:;" onclick="moveToFavourite('checked')">移入收藏夹</a>
+                                <!--<a href="javascript:;" onclick="contrast()">开始对比</a>-->
+                            </div>
+                            <div class="right">
+                                <span class="large-font"><img onclick="showQR()" style="width: 20px;position: relative;top: 5px;cursor: pointer;" src="" alt=""></span>
+                                <span>已选商品 <b class="main-color large-font">2</b> 件</span>
+                                <span>总计（不含运费）：<b class="main-color title-font">￥13338.00</b></span>
+                                <button class="button" id="goConfirm" onclick="statement()">结 算</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <div class="promise">
+                    <a href="#" >
+                        <dl>
+                            <dt class="icon p0"></dt>
+                            <dd>
+                                <h4>新九机 心生态</h4>
+                                <p>九机网，不止于手机</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <a href="#" >
+                        <dl>
+                            <dt class="icon p1"></dt>
+                            <dd>
+                                <h4>售假退一罚三</h4>
+                                <p>我们承诺，只做正品</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <a href="#" >
+                        <dl>
+                            <dt class="icon p2"></dt>
+                            <dd>
+                                <h4>3小时极速达</h4>
+                                <p>自建物流，直达客户</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <a href="#" >
+                        <dl>
+                            <dt class="icon p3"></dt>
+                            <dd>
+                                <h4>上门快修</h4>
+                                <p>线上预约维修，在线评估故障</p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <a href="#" >
+                        <dl>
+                            <dt class="icon p4"></dt>
+                            <dd>
+                                <h4>门店保障</h4>
+                                <p>实体购物，更加安心</p>
+                            </dd>
+                        </dl>
+                    </a>
+                </div>
+                <div class="foot-help">
+                    <div class="wrapper">
+                        <dl>
+                            <dt>新手指南</dt>
+                            <dd>
+                                <a href="#" rel="nofollow">购物流程</a>
+                                
+                                <a href="#">九机评测</a>
+                                <a href="#" rel="nofollow">积分计划</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>付款方式</dt>
+                            <dd>
+                                <a href="#" rel="nofollow">支付方式</a>
+                                <a href="#" rel="nofollow">分期付款</a>
+                                <a href="#" rel="nofollow">网银在线支付</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>配送方式</dt>
+                            <dd>
+                                <a href="#" rel="nofollow">到店自提</a>
+                                <a href="#" rel="nofollow">送货上门</a>
+                                <a href="#" rel="nofollow">快递运输</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>售后服务</dt>
+                            <dd>
+                                <a href="#" rel="nofollow">九机手机保修条例</a>
+                                <a href="#" rel="nofollow">硬件维修及报价</a>
+                                <a href="#" rel="nofollow">延保/意外保服务</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>帮助中心</dt>
+                            <dd>
+                                <a href="#" rel="nofollow">常见问题解答</a>
+                                <a href="#" rel="nofollow">4G热点问题解答</a>
+                                <a href="#" rel="nofollow">交易条款</a>
+                            </dd>
+                        </dl>
+                        <dl class="foot-sns">
+                            <dt class="icon erweima"></dt>
+                            <dd>
+                                <h4>九机网官方微信</h4>
+                                <p>扫描二维码，即刻调戏小九，更多精彩活动等着你哦！</p>
+                            </dd>
+                            <dd class="wblink">
+                                <a rel="nofollow" href="#" target="_blank" class="xinlang"><i class="icon wb"></i>新浪微博</a>
+                                <a rel="nofollow" href="#" target="_blank" class="tengxun"><i class="icon tb"></i>九机贴吧</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="bottom">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="foot_nav">
+                        <a href="#" rel="nofollow">常见问题</a><i>|</i>
+                        <a href="#" rel="nofollow">供应商申请</a><i>|</i>
+                        <a href="#" rel="nofollow">配送方式</a><i>|</i>
+                        <a href="#" rel="nofollow">招聘信息</a><i>|</i>
+                        <a href="#" rel="nofollow">关于我们</a><i>|</i>
+                        <a href="#" rel="nofollow">联系我们</a><i>|</i>
+                        <a href="#">地区报价</a><i>|</i>
+                        <a href="#">加盟招商</a><i>|</i>
+                        <a href="#">IT服务</a>
+                    </div>
+
+                    <div class="copy">
+                        
+                        <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+                        
+                        <p>网站ICP备案号：<a rel="nofollow" href="#" target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" href="#" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+                        
+                        <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+                        <p>云南九机信息技术有限公司版权所有</p>
+                    </div>
+                    <div class="bot-link">
+                    <a href="#"><img src="../img/bottom.png" /></a></div>        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
