@@ -1,359 +1,391 @@
+
+/*
+	* 封装常用方法
+	* 提取公共代码
+ */
+
 /**
- * [生成任意范围内随机整数的函数]
- * @param  {Number} min [最小值]
- * @param  {Number} max [最大值]
- * @return {Number}     [返回值]
+ * [生成一个范围内的随机整数]
+ * @param  {Number} min [范围最小值]
+ * @param  {Number} max [范围内最大值]
+ * @return {Number}     [返回随机整数]
  */
 function randomNumber(min,max){
-	return parseInt(Math.random()*(max-min+1))+min;
+	return parseInt(Math.random()*(max-min+1)) + min
 }
 
 
+// randomNumber(10,20);
 /**
- * [生成随机颜色函数]
- * @return {String} [返回rgb格式颜色]
+ * [生成4位随机数字验证码]
+ * @return {String} [返回随机4位数字的字符串]
  */
-function randomColor(){
-	// 16进制：#ddd
-	// rgb(255,222,66);
-
-	// var r = parseInt(Math.random()*256);
-	// var g = parseInt(Math.random()*256);
-	// var b = parseInt(Math.random()*256);
-
-	// 使用其它封装
-	var r = randomNumber(0,255);
-	var g = randomNumber(0,255);
-	var b = randomNumber(0,255);
-
-
-	return 'rgb(' + r + ',' + g + ',' + b + ')';//rgb(225,225,88)
-}
-
-/**
- * [生成16进制随机颜色函数]
- * @return {String} [返回16进制格式颜色代码]
- */
-function rColor(){
-	var str = '0123456789abcdef';//15
-
-	var res = '#';
-
-	for(var i=0;i<6;i++){
-		res += str[parseInt(Math.random()*str.length)];
+function vCode(){
+	var res = '';
+	for(var i=0;i<4;i++){
+		res += parseInt(Math.random()*10);//'' + 8=>'8'+6=>'86'+5=>'865'+0=>'8650'
 	}
 
 	return res;
 }
 
 
-var Element = {
-	/*
-		获取元素（过滤文本节点）
+/**
+ * [生成随机颜色]
+ * @return {String} [返回rgb颜色字符串]
+ */
+function randomColor(){
+	// 随机r,g,b
+	var r = parseInt(Math.random()*256);
+	var g = parseInt(Math.random()*256);
+	var b = parseInt(Math.random()*256);
+
+
+	return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
+
+function getColor(){
+	// 用于存放结果
+	var res = '#';
+
+	var str = '0123456789abcdef';
+
+	for(var i=0;i<6;i++){
+		var idx = parseInt(Math.random()*str.length);
+		res += str.charAt(idx);
+	}
+
+	return res
+}
+
+// getColor();//#58bc5b,#00000
+
+var element = {
+
+	// 方法
+	/**
+	 * [获取元素节点]
+	 * @param  {Node} nodes [传入的节点]
+	 * @return {Element}       [返回元素节点]
 	 */
 	get:function(nodes){
 		var res = [];
-
-		// 遍历所有节点
 		for(var i=0;i<nodes.length;i++){
-			// 找出元素节点并写入res
 			if(nodes[i].nodeType === 1){
-				res.push(nodes[i]);
+				res.push(nodes[i])
 			}
 		}
+		return res;
+	},
+	/**
+	 * [获取子元素]
+	 * @param  {[type]} element [description]
+	 * @return {[type]}         [description]
+	 */
+	children:function(element){
+		var nodes = element.childNodes;
 
-		// 返回元素节点
+		var res = element.get(nodes);//得到子元素
+
 		return res;
 	},
 
-	// 传入一个元素，获取它的子元素
-	children:function(ele){
-		var nodes = ele.childNodes;
-
-		var res = [];
-
-		for(var i=0;i<nodes.length;i++){
-			if(nodes[i].nodeType === 1){
-				res.push(nodes[i]);
-			}
-		}
-
-		return res;
-	},
-	// 获取前一个元素节点
-	next:function(ele){},
-
-	// 获取后一个元素节点
-	prev:function(ele){
+	//获取下一个元素
+	next:function(element){
 
 	},
 
-	// 把new 插入old的后面
-	insertAfter:function(newNode,old){
+	// 获取前一个元素
+	prev:function(){
 
 	}
 }
 
-// Element.get(list.childNodes);//7->3
+// element.children(links)
 
-/**
- * [获取元素样式，兼容IE8-]
- * @param  {Element} ele [获取样式的元素]
- * @param  {String} key [css属性]
- * @return {String}     [返回key对应的属性值]
- */
-function getCss(ele,key){
-	// 思路：判断浏览器是否支持这个方法
+function getCss(ele,attr){
+	// 兼容的思路：判断当前浏览器是否支持这个方法
+	// 而不是判断当前时什么浏览器
 	if(window.getComputedStyle){
-		// 标准浏览器
-		return getComputedStyle(ele)[key]
+		return getComputedStyle(ele)[attr]
 	}else if(ele.currentStyle){
-		// IE8-
-		return ele.currentStyle[key]
+		return ele.currentStyle[attr];
 	}else{
-		// 
-		return ele.style[key]
+		// 如果以上两个都不支持，则直接返回内联样式
+		return ele.style[attr];
 	}
 }
 
-// getCss(box,'font-size');//16px
+// getCss(box,'font-size');//30
 
-/**
- * [绑定事件函数，兼容IE8-]
- * @param  {Element}  ele       [绑定事件的元素]
- * @param  {String}  type      [事件名]
- * @param  {Function}  handler   [事件处理函数]
- * @param  {[Boolean]} isCapture [是否捕获]
- */
-function bind(ele,type,handler,isCapture){
-	// 优先使用事件监听器
-	if(ele.addEventListerner){
-		// 标准浏览器
-		ele.addEventListerner(type,handler,isCapture);
-	}else if(ele.attachEvent){
-		// IE8-
-		ele.attachEvent('on' + type,handler);
-	}else{
+
+var Event = {
+	/**
+	 * [绑定事件的方法，兼容所有浏览器]
+	 * @param  {Element}  ele       [绑定事件的元素]
+	 * @param  {String}  type      [事件类型]
+	 * @param  {Function}  handler   [事件处理函数]
+	 * @param  {Boolean} isCapture [是否捕获]
+	 */
+	bind:function(ele,type,handler,isCapture){console.log(isCapture)
+		// W3C标准的事件监听器
+		if(ele.addEventListener){
+			ele.addEventListener(type,handler,isCapture)
+		}
+
+		// IE8以下浏览器
+		else if(ele.attachEvent){
+			ele.attachEvent('on'+type,handler)
+		}
+
 		// DOM节点绑定方式
-		ele['on' + type] = handler
+		else{
+			ele['on' + type] = handler;
+		}
+	},
+	remove(ele,type,handler,isCapture){
+		if(ele.removeEventListener){
+			ele.removeEventListener(type,handler,isCapture)
+		}
+
+		// IE8以下浏览器
+		else if(ele.detachEvent){
+			ele.detachEvent('on'+type,handler)
+		}
+
+		else{
+			ele['on' + type] = null;
+		}
 	}
 }
 
-// bind(ele,'click',function(){},true);
+// 给元素绑定事件
+// event.bind(box,'click',function(){},true);
+// Event.remove(box,'click',fn,true)
 
 
-/*
-	Cookie操作
-	* 增
-	* 删
-	* 查
-	* 改
- */
 var Cookie = {
 	/**
-	 * [获取cookie]
-	 * @param  {String} key [cookie名]
-	 * @return {String}      [返回cookie自]
+	 * [写入修改cookie]
+	 * @param {String} name   [cookie名]
+	 * @param {String} val    [cookie值]
+	 * @param {[Object]} params [cookie参数]
+	 	* expires {Date} 
+	 	* path    {String}
+	 	* domain  {String}
+	 	* secure  {Boolean}
 	 */
-	get:function(key){
-		// 先获取所有cookie
-		var cookies = document.cookie;
-		if(cookies.length === 0){
-			return '';
-		}
+	set:function(name,val,params){
+		// params={expires,path,domain,secure}
 
-		// 拆分每一个cookie
-		cookies = cookies.split('; ');
+		// cookie名与cookie值
+		var cookieStr = name +'=' + val;
 
-		for(var i=0;i<cookies.length;i++){
-			// 拆分key,value
-			var arr = cookies[i].split('=');
-
-			if(arr[0] === key){
-				return arr[1];
-			}
-		}
-	},
-
-	/**
-	 * [设置/修改cookie]
-	 * @param {String} key   [cookie名]
-	 * @param {String} value [cookie值]
-	 * @param {[Date]} date  [有效期，必须为Date类型]
-	 * @param {[String]} path  [cookie保存路径]
-	 */
-	set:function(key,value,date,path){
-		var str = key + '=' + value;
+		params = params || {};
 
 		// 有效期
-		if(date){
-			str += ';expires=' + date.toUTCString();
+		if(params.expires){
+			cookieStr += ';expires=' + params.expires.toUTCString();
 		}
 
 		// 路径
-		if(path){
-			str += ';path='+path;
+		if(params.path){
+			cookieStr += ';path=' + params.path;
 		}
 
-		document.cookie = str;
-	},
+		// 域名
+		if(params.domain){
+			cookieStr += ';domain=' + params.domain;
+		}
 
+
+		// 安全性
+		if(params.secure){
+			cookieStr += ';secure';
+		}
+
+
+		document.cookie = cookieStr;
+	},
+	/**
+	 * [获取cookie]
+	 * @param  {String} name [description]
+	 * @return {[type]}      [description]
+	 */
+	get:function(name){
+		var cookies = document.cookie;
+
+		// 如果cookie不存在，直接返回空字符串
+		if(cookies.length===0){
+			return '';
+		}
+
+		var res = '';
+
+		cookies = cookies.split('; ');
+		for(var i=0;i<cookies.length;i++){
+			var arr = cookies[i].split('=');
+			if(arr[0] === name){
+				res = arr[1];
+				break;
+			}
+		}
+
+
+		return res;
+	},
 	/**
 	 * [删除cookie]
-	 * @param  {String} key [cookie名]
-	 * @param {[String]} path     [cookie保存的路径]
+	 * @param  {String} name [删除cookie]
 	 */
-	remove:function(key,path){
-		var d = new Date();
-		d.setDate(d.getDate()-1);
+	remove:function(name){
+		var now = new Date();
+		now.setDate(now.getDate()-10);
 
-		// document.cookie = key + '=x;expires=' + d.toUTCString();
-		this.set(key,'x',d,path);
-	},
-
-	// 清空cookie
-	clear:function(){
-
+		// document.cookie = name + '=x;expires=' + now.toUTCString(); 
+		this.set(name,'x',{expires:now});
 	}
 }
 
-// Cookie.get('name');//laoxie
-// Cookie.set('username','lemon',date,path);//laoxie
-// Cookie.remove('username','/');
+// 需求驱动开发
+// Cookie.set('goodslist',JSON.stringify(goodslist),null,'')
+// Cookie.set('top','200px')
+// now = new Date()
+// now.setDate(now.getDate()+7)
+// Cookie.set('left','100px',{expires:now,path:'/'})
+// Cookie.get('top');//得到top的cookie值
+// Cookie.remove('top');
 
 
-/*function animate(ele,attr,target){
-	// 清除定时器，避免多个定时器用作于一个效果
-	clearInterval(ele.timer);
-
-	ele.timer = setInterval(()=>{
-		// 获取当前值
-		let current = getCss(ele,attr);//100px,45deg,0.5(string)
-
-		// 提取单位
-		let unit = current.match(/[a-z]+$/i);//[0:px,index:6,input:current],null
-
-		// 三元运算实现提取单位
-		unit = unit ? unit[0] : '';
-
-		// 提取值
-		current = parseFloat(current);
-
-		// 计算缓冲速度
-		let speed = (target-current)/10;//0.5=>1,-0.5=>-1
-
-
-		// 避免速度为小数
-		speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);//1,-1
-
-		// 针对opacity进行操作
-		if(attr === 'opacity'){
-			speed = speed>0 ? 0.05 : -0.05;
-		}
-
-		// 根据速度改变当前值
-		current += speed;
-
-
-		// 当到达目标指时
-		if(current === target || speed === 0){
-			clearInterval(ele.timer);
-
-			// 避免超出target的范围
-			current = target;
-		}
-
-
-		ele.style[attr] = current + unit;
-	},30)
-}*/
-
-// opt:{width:200,height:100,top:20}
 /**
  * [动画函数]
- * @param  {Element}   ele      [动画元素]
- * @param  {Object}   opt      [动画属性]
- * @param  {Function} callback [回调函数]
+ * @param  {Element} ele    [动画元素]
+ * @param  {String} attr   [动画属性]
+ * @param  {Number} target [目标值]
  */
+/*function animate(ele,attr,target){
+	var timername = attr + 'timer';//toptimer,lefttimer
+	clearInterval(ele[timername]);
+	ele[timername] = setInterval(()=>{
+ 		// 获取当前值
+ 		let current = getComputedStyle(ele)[attr];//'100px,50deg,0.3'
+
+ 		//提取单位
+ 		let unit = current.match(/[a-z]+$/);//px,deg,null
+
+ 		// 
+ 		unit = unit ? unit[0] : '';
+
+ 		// 提取值
+ 		current = parseFloat(current);
+
+
+
+ 		// 计算缓冲速度
+ 		let speed = Math.floor((target-current)/10);//-32->20->10->5.5->0.5
+
+ 		// 计算top值
+ 		current += speed;
+
+ 		if(current === target || speed === 0){
+ 			clearInterval(ele[timername]);
+
+ 			// 重置current值
+ 			current = target;
+ 		}
+
+ 		ele.style[attr] = current + unit;
+
+ 	},30);
+}*/
+
 function animate(ele,opt,callback){
-	// 记录动画的数量
-	let timerLen = 0;
+	// opt= {left:100,top:200,fontSize:40}
 
+	// 属性（动画）数量
+	ele.timerLen = 0;
 
-	// 遍历opt，获取所有attr和target
+	// 遍历设置定时器（动画）
 	for(var attr in opt){
-		timerLen++;
+		// 遍历过程设定动画数量
+		ele.timerLen++;
 
-		createTimer(attr);
-	}
-	
-	
-	function createTimer(attr){
-		let target = opt[attr];
+		// 匿名函数传递attr
+		(function(attr){
+			var timername = attr + 'timer';
+			var target = opt[attr];
 
-		// 设置定时器的名字与attr关联
-		let timerName = attr + 'timer';//widthtimer,heighttimer,toptimer
+			// 清除同名timer
+			clearInterval(ele[timername]);
 
+			ele[timername] = setInterval(function(){
+				// 获取当前值
+				var current = getCss(ele,attr);//100px,45deg,0.3
 
-		// 清除定时器，避免多个定时器用作于一个效果
-		clearInterval(ele[timerName]);
+				// 提取单位
+				var unit = current.match(/[a-z]+$/);//[px],[deg],null
 
-		ele[timerName] = setInterval(()=>{
-			// 获取当前值
-			let current = getCss(ele,attr);//100px,45deg,0.5(string)
+				unit = unit ? unit[0] : '';
 
-			// 提取单位
-			let unit = current.match(/[a-z]+$/i);//[0:px,index:6,input:current],null
+				// 提取值
+				current = parseFloat(current);
 
-			// 三元运算实现提取单位
-			unit = unit ? unit[0] : '';
+				// 计算缓冲速度
+				var speed = (target-current)/10;//-0.5,10,0.2
 
-			// 提取值
-			current = parseFloat(current);
+				// 避免速度变成0
 
-			// 计算缓冲速度
-			let speed = (target-current)/10;//0.5=>1,-0.5=>-1
+				// 有单位
+				speed = speed<0 ? Math.floor(speed) : Math.ceil(speed);
 
-
-			// 避免速度为小数
-			speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);//1,-1
-
-			// 针对opacity进行操作
-			if(attr === 'opacity'){
-				speed = speed>0 ? 0.05 : -0.05;
-			}
-
-			// 根据速度改变当前值
-			current += speed;
-
-
-			// 当到达目标指时
-			if(current === target || speed === 0){
-				clearInterval(ele[timerName]);
-
-				// 避免超出target的范围
-				current = target;
-
-				// 每一个动画完成数量减一
-				timerLen--;
-
-				//动画结束后执行回掉函数
-				// if(timerLen===0 && typeof callback === 'function'){
-				// 	callback();
-				// }
-
-				if(timerLen === 0){
-					typeof callback==='function' && callback();
+				if(attr === 'opacity'){
+					speed = speed<0 ? -0.02 : 0.02;
 				}
-			}
+
+				current += speed;
+
+				// 当到达目标值时
+				if(current === target || speed === 0){
+					clearInterval(ele[timername]);
+					current = target;
+
+					ele.timerLen--;
+
+					// 执行回到函数
+					// if(typeof callback === 'function'){
+					// 	callback();
+					// }
 
 
-			ele.style[attr] = current + unit;
-		},30);
+					// 动画完成后执行回掉函数
+					if(ele.timerLen === 0){
+						typeof callback === 'function' && callback();
+					}
+
+
+				}
+				ele.style[attr] = current + unit;
+			},30);
+
+		})(attr);
 	}
 }
-// animate(box,'opacity',1);
-// animate(box,'opacity',0.5);
+
+
+// if(!Object.prototype.type){
+// 	Object.prototype.type = function(){
+// 		return Object.prototype.toString.call(this).slice(8,-1).toLowerCase();//[object Function],[object Null],[object Number]
+// 	}
+// }
+/**
+ * [数据类型判断]
+ * @param  {All} data [数据类型]
+ * @return {String}      [返回数据类型字符串]
+ */
+function type(data){
+	return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
+}
 
 
 function ajax(options){
@@ -475,39 +507,3 @@ function ajax(options){
 
 	xhr.send(params);
 }
-
-/**
- * [判断数据类型函数]
- * @param  {Any} data [传入的数据]
- * @return {String}      [返回data对应的数据类型]
- */
-function type(data){
-	return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();//[Object,xxx]
-}
-
-
-// randomColor();//rgb(225,225,88)
-
-// var laoxie = {
-// 	randomNumber:function(min,max){
-// 		return parseInt(Math.random()*(max-min+1))+min;
-// 	},
-// 	randomColor:function (){
-// 		// 16进制：#ddd
-// 		// rgb(255,222,66);
-
-// 		// var r = parseInt(Math.random()*256);
-// 		// var g = parseInt(Math.random()*256);
-// 		// var b = parseInt(Math.random()*256);
-
-// 		// 使用其它封装
-// 		var r = randomNumber(0,255);
-// 		var g = randomNumber(0,255);
-// 		var b = randomNumber(0,255);
-
-
-// 		return 'rgb(' + r + ',' + g + ',' + b + ')';//rgb(225,225,88)
-// 	}
-// }
-
-
