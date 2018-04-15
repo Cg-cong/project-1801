@@ -48,8 +48,10 @@ jQuery(function($){
         var jiesuan = $('.cart-total .right span b');
         var zongshu  = jiesuan.eq(0);
         var zongjia = jiesuan.eq(1);
-        zongjia.html('￥0'); 
-        
+        zongjia.html('￥0');
+         
+
+
         
     }
 
