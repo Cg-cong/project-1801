@@ -1,4 +1,13 @@
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
+require(['config'],function(){
+    require(['jquery','common','lunbo'],function($){
+        $('.flexslider').flexslider({
+            directionNav: true,
+            pauseOnAction: false,
+            slideshowSpeed: 2000
+        });
+
+    
     var data=(function(){
         var jieshou;
         ajax({
@@ -28,5 +37,6 @@ document.addEventListener('DOMContentLoaded',function(){
                 </a>
         </li>`
     }).join('');
-    
-});
+
+    });
+});//

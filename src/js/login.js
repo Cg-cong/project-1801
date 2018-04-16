@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
+require(['config'],function(){
+    require(['common'],function($){
     // console.log(666)
     var user = document.querySelector('#txtUser');
     var pwd = document.querySelector('#Userpwd');
@@ -49,5 +51,5 @@ document.addEventListener('DOMContentLoaded',function(){
         });
     }
 
-
+    });
 });

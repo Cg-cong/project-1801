@@ -4,14 +4,14 @@
 /node_modules/
 /doc
 /dist/
-/src/img
+#/src/img
 #过滤文件
 *.zip
 *.mp3
 *.mp4
-*.jpg
-*.png
-*.gif
+#*.jpg
+#*.png
+#*.gif
 
 
 

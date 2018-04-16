@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded',function(){
+// require(['config'],function(){
+    // require(['common','jquery','fdj'],function($){       
+
     // console.log(666)
+    // var magnifierConfig = {
+    //     magnifier : "#magnifier1",//最外层的大容器
+    //     width : 440,//承载容器宽
+    //     height : 440,//承载容器高
+    //     moveWidth : null,//如果设置了移动盒子的宽度，则不计算缩放比例
+    //     zoom : 2//缩放比例
+    // };
+
+    // var _magnifier = magnifier(magnifierConfig);
     var logo = document.querySelector('.h_l');
     var menu = document.querySelector('.nav-menu');
     logo.onmouseenter = function(){
@@ -21,6 +33,10 @@ document.addEventListener('DOMContentLoaded',function(){
         });
         return jieshou;
     })();
+    // });
+    
+
+    console.log(666)
     
     document.onreadystatechange = function(){
     var toshop = document.getElementById('toshop');
@@ -44,6 +60,7 @@ document.addEventListener('DOMContentLoaded',function(){
             price.innerText = data[i].price;
         }
     };
+
     var phonelist = Cookie.get('phonelist') || [];
     if(typeof phonelist === 'string'){
         phonelist = JSON.parse(phonelist);
@@ -56,6 +73,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // console.log(phonelist[i].qty);
         
     // }
+    
     
     toshop.onclick = function(e){
     var copyimg = bigimg.cloneNode(true);
@@ -134,4 +152,4 @@ document.addEventListener('DOMContentLoaded',function(){
     
 
 
-});
+});//

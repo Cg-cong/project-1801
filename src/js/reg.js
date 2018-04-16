@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
+require(['config'],function(){
+    require(['common'],function($){
     // 注册验证码
     var vCodeImg2 = document.getElementById('vCodeImg2');
     // console.log(vCodeImg2)
@@ -165,5 +167,6 @@ document.addEventListener('DOMContentLoaded',function(){
         });
     
     };
+    });
     
 }); //

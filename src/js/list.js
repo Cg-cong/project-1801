@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded',function(){
+// document.addEventListener('DOMContentLoaded',function(){
+require(['config'],function(){
+    require(['common'],function($){
     var data=(function(){
         var jieshou;
         ajax({
@@ -67,4 +69,5 @@ document.addEventListener('DOMContentLoaded',function(){
             
         }
     }
-});
+    });
+});//
